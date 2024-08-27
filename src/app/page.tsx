@@ -6,13 +6,17 @@ import { Chart2 } from "@/components/Chart2";
 
 export default function Home() {
   return (
-    <div className="font-bold min-h-screen text-2xl bg-black">
-      <Navbar />
-      <div className="text-white min-h-screen p-4 m-4  pt-0  grid grid-flow-col gap-3 p-4 m-4 grid-rows-2 ">
-        <div className="bg-white text-black rounded-lg order-1"><Chart1 /></div>
-        <div className="bg-white text-black rounded-lg order-3"><Chart2 /></div>
-        <div className="bg-white text-black rounded-lg order-2">No data available!</div>
-        <div className="bg-white text-black rounded-lg order-4">No data available!</div>
+    <div>
+      <div className="text-center m-2 text-2xl font-bold font-mono md:p-6 md:m-6 ">
+        <Navbar />
+      </div>
+      <div  className="font-bold m-4 p-4 gap-3 grid grid-cols-1 md:grid-cols-2 text-2xl bg-black pt-8 mt-8">
+        <div className="flex items-center justify-center bg-white text-black rounded-lg p-4">
+          <Chart1 />
+        </div>
+        <div className="flex items-center justify-center bg-white text-black rounded-lg p-4">
+          <Chart2 />
+        </div>
       </div>
     </div>
   );
