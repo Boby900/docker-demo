@@ -28,7 +28,7 @@ export async function GET() {
 
     // Return the response
     return new Response(JSON.stringify(data), { status: 200 });
-  } catch (error) {
+  } catch (error:any) {
     // Handle errors
     return new Response(JSON.stringify({ error: error.message }), { status: 500 });
   }
