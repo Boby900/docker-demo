@@ -1,6 +1,6 @@
 // In Next.js, this file would be called: app/providers.jsx
 'use client'
-
+import { ReactNode } from 'react'
 // Since QueryClientProvider relies on useContext under the hood, we have to put 'use client' on top
 import {
   isServer,
@@ -35,8 +35,10 @@ function getQueryClient() {
     return browserQueryClient
   }
 }
-
-export default function Providers({ children }) {
+interface ProvidersProps {
+  children: ReactNode
+}
+export default function Providers({ children }: ProvidersProps) {
   // NOTE: Avoid useState when initializing the query client if you don't
   //       have a suspense boundary between this and the code that may
   //       suspend because React will throw away the client on the initial
